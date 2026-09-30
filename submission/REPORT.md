@@ -19,7 +19,7 @@
 | Evidence            | Đường dẫn                             |
 | ------------------- | ------------------------------------- |
 | Pytest cuối         | `evidence/01-pytest.png`              |
-| Log validator       | `evidence/02-log-validator.png`       |
+| Log validator       | `evidence/02-log-validator.txt`       |
 | Dashboard validator | `evidence/03-dashboard-validator.png` |
 | Structured log      | `evidence/04-structured-log.png`      |
 | PII redaction       | `evidence/05-pii-redaction.png`       |
@@ -37,20 +37,20 @@
 
 | Nội dung                | Baseline  | Kết quả cuối | Nhận xét |
 | ----------------------- | --------- | ------------ | -------- |
-| `validate_logs.py`      | 30/100    |              | Base     |
+| `validate_logs.py`      | 30/100    | 100/100      | Đạt CP1  |
 | `validate_dashboard.py` | 6/6       |              | Hợp      |
-| `pytest`                | 22 passed |              |          |
+| `pytest`                | 22 passed | 26 passed    | CP1      |
 | Số traces hợp lệ        |           |              |          |
-| Số PII leak             |           |              |          |
+| Số PII leak             | Chưa đo   | 0            | Đạt      |
 | Latency P95 / TTFT P95  |           |              |          |
 | Retrieval success rate  |           |              |          |
 
 ## 4. Logging và PII
 
-- **Cách tạo/nhận và truyền correlation ID:**
-- **Các metadata được ghi vào structured log:**
-- **Cách bảo đảm PII được scrub trước khi ghi:**
-- **Cách kiểm chứng kết quả:**
+- **Cách tạo/nhận và truyền correlation ID:** Middleware xóa context cũ ở đầu request, nhận header hợp lệ theo mẫu `req-<8-hex>` hoặc sinh ID mới từ UUID, bind vào `structlog.contextvars`, gán vào `request.state` và trả lại trong header `x-request-id`.
+- **Các metadata được ghi vào structured log:** `user_id_hash` (SHA-256 rút gọn), `session_id`, `feature`, `model`, `env` và `correlation_id`; log kết quả còn có latency, TTFT, token, cost và quality score.
+- **Cách bảo đảm PII được scrub trước khi ghi:** Processor `scrub_event` duyệt đệ quy toàn bộ event sau bước tạo exception/stack data và trước `JsonlFileProcessor`/`JSONRenderer`, che email, số điện thoại Việt Nam, CCCD và số thẻ.
+- **Cách kiểm chứng kết quả:** Test unit và tích hợp gửi đủ bốn loại PII, kiểm tra response header/correlation ID/enrichment; `python scripts/validate_logs.py` đạt 100/100 với 0 PII leak. Baseline cũ được giữ cục bộ tại `data/logs.cp1-baseline.jsonl` và log sạch được tạo lại trước khi đo.
 
 ## 5. Tracing và prompt versioning
 
