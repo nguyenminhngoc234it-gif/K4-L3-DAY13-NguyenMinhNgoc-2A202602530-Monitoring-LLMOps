@@ -4,10 +4,10 @@
 
 ## 1. Thông tin học viên
 
-- **Họ và tên:**
-- **MSSV:**
+- **Họ và tên:** Nguyễn Minh Ngọc
+- **MSSV:** 2A202602530
 - **Lớp:** K4-L3B
-- **Repository URL:**
+- **Repository URL:** https://github.com/nguyenminhngoc234it-gif/K4-L3-DAY13-NguyenMinhNgoc-2A202602530-Monitoring-LLMOps
 - **Commit SHA cuối:**
 - **Challenge ID:**
 - **Tên project Langfuse cá nhân:** `day13-k4-l3b-<MSSV>`
@@ -16,34 +16,34 @@
 
 Điền đúng đường dẫn tới evidence thực tế. Có thể đổi tên hoặc dùng nhiều ảnh nếu cần.
 
-| Evidence | Đường dẫn |
-|---|---|
-| Pytest cuối | `evidence/01-pytest.png` |
-| Log validator | `evidence/02-log-validator.png` |
+| Evidence            | Đường dẫn                             |
+| ------------------- | ------------------------------------- |
+| Pytest cuối         | `evidence/01-pytest.png`              |
+| Log validator       | `evidence/02-log-validator.png`       |
 | Dashboard validator | `evidence/03-dashboard-validator.png` |
-| Structured log | `evidence/04-structured-log.png` |
-| PII redaction | `evidence/05-pii-redaction.png` |
-| Trace list | `evidence/06-trace-list.png` |
-| Trace waterfall | `evidence/07-trace-waterfall.png` |
-| Trace metadata | `evidence/08-trace-metadata.png` |
-| Prompt versions | `evidence/09-prompt-versions.png` |
-| Prompt rollback | `evidence/10-prompt-rollback.png` |
-| Dashboard runtime | `evidence/11-dashboard-overview.png` |
-| Incident metric | `evidence/12-incident-metric.png` |
-| Incident log | `evidence/13-incident-log.png` |
-| Incident trace | `evidence/14-incident-trace.png` |
+| Structured log      | `evidence/04-structured-log.png`      |
+| PII redaction       | `evidence/05-pii-redaction.png`       |
+| Trace list          | `evidence/06-trace-list.png`          |
+| Trace waterfall     | `evidence/07-trace-waterfall.png`     |
+| Trace metadata      | `evidence/08-trace-metadata.png`      |
+| Prompt versions     | `evidence/09-prompt-versions.png`     |
+| Prompt rollback     | `evidence/10-prompt-rollback.png`     |
+| Dashboard runtime   | `evidence/11-dashboard-overview.png`  |
+| Incident metric     | `evidence/12-incident-metric.png`     |
+| Incident log        | `evidence/13-incident-log.png`        |
+| Incident trace      | `evidence/14-incident-trace.png`      |
 
 ## 3. Kết quả kỹ thuật
 
-| Nội dung | Baseline | Kết quả cuối | Nhận xét |
-|---|---|---|---|
-| `validate_logs.py` | | | |
-| `validate_dashboard.py` | | | |
-| `pytest` | | | |
-| Số traces hợp lệ | | | |
-| Số PII leak | | | |
-| Latency P95 / TTFT P95 | | | |
-| Retrieval success rate | | | |
+| Nội dung                | Baseline  | Kết quả cuối | Nhận xét |
+| ----------------------- | --------- | ------------ | -------- |
+| `validate_logs.py`      | 30/100    |              | Base     |
+| `validate_dashboard.py` | 6/6       |              | Hợp      |
+| `pytest`                | 22 passed |              |          |
+| Số traces hợp lệ        |           |              |          |
+| Số PII leak             |           |              |          |
+| Latency P95 / TTFT P95  |           |              |          |
+| Retrieval success rate  |           |              |          |
 
 ## 4. Logging và PII
 
