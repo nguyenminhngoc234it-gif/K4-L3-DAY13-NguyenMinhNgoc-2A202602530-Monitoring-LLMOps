@@ -81,22 +81,22 @@ Không dùng đường dẫn cục bộ như `C:\Users\...` hoặc `/home/studen
 
 Tên file dưới đây là gợi ý; có thể dùng tên khác nếu `REPORT.md` dẫn đúng.
 
-| Evidence | Nội dung phải nhìn thấy hoặc kiểm chứng được | File gợi ý |
-|---|---|---|
-| Test cuối | Lệnh `python -m pytest -q`, số test pass/fail | `01-pytest.png` hoặc `.txt` |
-| Log validator | Kết quả cuối của `validate_logs.py`, điểm tối thiểu 80/100 | `02-log-validator.png` |
-| Dashboard validator | Kết quả `validate_dashboard.py`, đủ 6/6 | `03-dashboard-validator.png` |
-| Structured log | Log JSON có timestamp, event, `correlation_id`, model, env, feature và latency | `04-structured-log.png` |
-| PII redaction | Input test chứa PII giả và log đầu ra đã che email/điện thoại/CCCD/thẻ | `05-pii-redaction.png` |
-| Trace list | Tên project cá nhân và danh sách tối thiểu 10 traces do chính học viên tự chạy workload để tạo | `06-trace-list.png` |
-| Trace waterfall | Một trace có root observation, retrieval và generation theo đúng quan hệ cha-con | `07-trace-waterfall.png` |
-| Trace metadata | `correlation_id`, model, prompt name/version/label, token và cost; không có PII thô | `08-trace-metadata.png` |
-| Prompt versions | Trong project cá nhân: prompt v1/v2 và các label `baseline`, `candidate`, `production` | `09-prompt-versions.png` |
-| Prompt rollback | Trạng thái trước/sau khi promote hoặc rollback `production`; kèm trace ID của hai version trong report | `10-prompt-rollback.png` |
-| Dashboard runtime | Đủ 6 panel, có dữ liệu, time range, đơn vị và threshold/SLO line | `11-dashboard-overview.png` |
-| Incident metric | Metric bất thường và khoảng thời gian xảy ra challenge | `12-incident-metric.png` |
-| Incident log | Log line bất thường có `correlation_id` | `13-incident-log.png` |
-| Incident trace | Trace có cùng `correlation_id`, thấy span gây chậm/lỗi | `14-incident-trace.png` |
+| Evidence            | Nội dung phải nhìn thấy hoặc kiểm chứng được                                                           | File gợi ý                   |
+| ------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------- |
+| Test cuối           | Lệnh `python -m pytest -q`, số test pass/fail                                                          | `01-pytest.png` hoặc `.txt`  |
+| Log validator       | Kết quả cuối của `validate_logs.py`, điểm tối thiểu 80/100                                             | `02-log-validator.png`       |
+| Dashboard validator | Kết quả `validate_dashboard.py`, đủ 6/6                                                                | `03-dashboard-validator.png` |
+| Structured log      | Log JSON có timestamp, event, `correlation_id`, model, env, feature và latency                         | `04-structured-log.png`      |
+| PII redaction       | Input test chứa PII giả và log đầu ra đã che email/điện thoại/CCCD/thẻ                                 | `05-pii-redaction.png`       |
+| Trace list          | Tên project cá nhân và danh sách tối thiểu 10 traces do chính học viên tự chạy workload để tạo         | `06-trace-list.png`          |
+| Trace waterfall     | Một trace có root observation, retrieval và generation theo đúng quan hệ cha-con                       | `07-trace-waterfall.png`     |
+| Trace metadata      | `correlation_id`, model, prompt name/version/label, token và cost; không có PII thô                    | `08-trace-metadata.png`      |
+| Prompt versions     | Trong project cá nhân: prompt v1/v2 và các label `baseline`, `candidate`, `production`                 | `09-prompt-versions.png`     |
+| Prompt rollback     | Trạng thái trước/sau khi promote hoặc rollback `production`; kèm trace ID của hai version trong report | `10-prompt-rollback.png`     |
+| Dashboard runtime   | Đủ 6 panel, có dữ liệu, time range, đơn vị và threshold/SLO line                                       | `11-dashboard-overview.png`  |
+| Incident metric     | Metric bất thường và khoảng thời gian xảy ra challenge                                                 | `12-incident-metric.png`     |
+| Incident log        | Log line bất thường có `correlation_id`                                                                | `13-incident-log.png`        |
+| Incident trace      | Trace có cùng `correlation_id`, thấy span gây chậm/lỗi                                                 | `14-incident-trace.png`      |
 
 Nếu dashboard không thể đọc rõ trong một ảnh, tách thành `11a-dashboard-latency-errors.png` và `11b-dashboard-cost-token-quality.png`.
 
@@ -175,13 +175,13 @@ git log -1 --oneline
 
 Checklist cuối:
 
-- [ ] Source và TODO bắt buộc đã hoàn thành bằng repository cá nhân.
-- [ ] Test, log validator và dashboard validator có evidence.
-- [ ] Có tối thiểu 10 traces tự tạo trong project Langfuse cá nhân, waterfall, metadata và prompt rollback.
-- [ ] Ảnh Langfuse nhìn thấy tên project cá nhân nhưng không lộ API key/secret.
-- [ ] Dashboard đủ 6 panel; SLO/error budget và 3 alert/runbook đã hoàn thiện.
-- [ ] Incident evidence nối đúng metric → log → trace.
-- [ ] `submission/REPORT.md` đã điền đầy đủ.
-- [ ] Không có secret, PII thô hoặc nội dung sao chép từ người khác/lớp khác.
-- [ ] Tất cả link/ảnh mở được trực tiếp trên GitHub.
-- [ ] URL repo cá nhân và commit SHA cuối đã được nộp.
+- [x] Source và TODO bắt buộc đã hoàn thành bằng repository cá nhân.
+- [x] Test, log validator và dashboard validator có evidence.
+- [x] Có tối thiểu 10 traces tự tạo trong project Langfuse cá nhân, waterfall, metadata và prompt rollback.
+- [x] Ảnh Langfuse nhìn thấy tên project cá nhân nhưng không lộ API key/secret.
+- [x] Dashboard đủ 6 panel; SLO/error budget và 3 alert/runbook đã hoàn thiện.
+- [x] Incident evidence nối đúng metric → log → trace.
+- [x] `submission/REPORT.md` đã điền đầy đủ.
+- [x] Không có secret, PII thô hoặc nội dung sao chép từ người khác/lớp khác.
+- [x] Tất cả link/ảnh mở được trực tiếp trên GitHub.
+- [x] URL repo cá nhân và commit SHA cuối đã được nộp.

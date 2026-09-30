@@ -18,17 +18,17 @@
 
 | Evidence            | Đường dẫn                             |
 | ------------------- | ------------------------------------- |
-| Pytest cuối         | `evidence/01-pytest.txt`              |
-| Log validator       | `evidence/02-log-validator.txt`       |
-| Dashboard validator | `evidence/03-dashboard-validator.txt` |
+| Pytest cuối         | `evidence/01-pytest.png`              |
+| Log validator       | `evidence/02-log-validator.png`       |
+| Dashboard validator | `evidence/03-dashboard-validator.png` |
 | Structured log      | `evidence/04-structured-log.png`      |
 | PII redaction       | `evidence/05-pii-redaction.png`       |
-| Trace list          | `evidence/06-trace-list.txt`          |
-| Trace waterfall     | `evidence/07-trace-waterfall.txt`     |
-| Trace metadata      | `evidence/08-trace-metadata.txt`      |
-| Prompt versions     | `evidence/09-prompt-versions.txt`     |
-| Prompt rollback     | `evidence/10-prompt-rollback.txt`     |
-| Dashboard runtime   | `evidence/11-dashboard-overview.svg`  |
+| Trace list          | `evidence/06-trace-list.png`          |
+| Trace waterfall     | `evidence/07-trace-waterfall.png`     |
+| Trace metadata      | `evidence/08-trace-metadata.png`      |
+| Prompt versions     | `evidence/09-prompt-versions.png`     |
+| Prompt rollback     | `evidence/10-prompt-rollback.png`     |
+| Dashboard runtime   | `evidence/11-dashboard-overview.png`  |
 | Incident metric     | `evidence/12-incident-metric.png`     |
 | Incident log        | `evidence/13-incident-log.png`        |
 | Incident trace      | `evidence/14-incident-trace.png`      |
@@ -97,10 +97,10 @@
 
 ## 9. Checklist trước khi nộp
 
-- [ ] Kết quả và evidence thuộc commit SHA cuối.
+- [x] Kết quả và evidence thuộc commit SHA cuối.
 - [x] Tất cả ảnh/output mở được bằng đường dẫn tương đối.
 - [x] Incident evidence nối đúng metric → log → trace.
 - [x] Trace/prompt evidence thuộc project Langfuse cá nhân và ảnh không lộ key/secret.
 - [x] Repository chạy lại được theo README.
 - [x] Không có secret, API key, PII thô hoặc evidence của người khác/lớp khác.
-- [ ] URL repo và commit SHA cuối đã được nộp trên LMS/Codelabs.
+- [x] URL repo và commit SHA cuối đã được nộp trên LMS/Codelabs.
